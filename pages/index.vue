@@ -136,7 +136,7 @@
     </section>
 
     <!-- Interactive Tech Stack Section -->
-    <section class="py-32 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden" data-animate="fade-up">
+    <section class="py-32 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden" data-animate="fade-up">
       <!-- Floating tech particles -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-20 left-20 w-2 h-2 bg-green-400 rounded-full animate-pulse opacity-60"></div>
@@ -174,8 +174,8 @@
               <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-gray-600/50 group-hover:border-cyan-500/50">
                 <Icon :name="tech.icon" class="w-8 h-8 text-gray-400 group-hover:text-cyan-400 transition-colors duration-300" />
               </div>
-              <h3 class="text-sm font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300">{{ tech.name }}</h3>
-              <p class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 code-font">{{ tech.category }}</p>
+              <h3 class="text-sm font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300 tracking-wide">{{ tech.name }}</h3>
+              <p class="text-xs text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 code-font font-medium">{{ tech.category }}</p>
             </div>
             
             <!-- Hover line effect -->
