@@ -43,27 +43,27 @@
                   <label for="firstName" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                     <span class="text-green-400">//</span> first_name
                   </label>
-                  <input 
+                  <Input 
                     v-model="form.firstName"
                     type="text" 
                     id="firstName" 
                     required
-                    class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 code-font"
+                    class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white code-font placeholder:text-gray-500"
                     placeholder="String firstName = ..."
-                  >
+                  />
                 </div>
                 <div data-stagger>
                   <label for="lastName" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                     <span class="text-green-400">//</span> last_name
                   </label>
-                  <input 
+                  <Input 
                     v-model="form.lastName"
                     type="text" 
                     id="lastName" 
                     required
-                    class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 code-font"
+                    class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white code-font placeholder:text-gray-500"
                     placeholder="String lastName = ..."
-                  >
+                  />
                 </div>
               </div>
 
@@ -71,44 +71,44 @@
                 <label for="email" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                   <span class="text-green-400">//</span> email_address
                 </label>
-                <input 
+                <Input 
                   v-model="form.email"
                   type="email" 
                   id="email" 
                   required
-                  class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 code-font"
+                  class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white code-font placeholder:text-gray-500"
                   placeholder="your.email@domain.com"
-                >
+                />
               </div>
 
               <div data-stagger>
                 <label for="company" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                   <span class="text-green-400">//</span> company_name (optional)
                 </label>
-                <input 
+                <Input 
                   v-model="form.company"
                   type="text" 
                   id="company"
-                  class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 code-font"
+                  class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white code-font placeholder:text-gray-500"
                   placeholder="YourCompany Inc."
-                >
+                />
               </div>
 
               <div data-stagger>
                 <label for="budget" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                   <span class="text-green-400">//</span> project_budget
                 </label>
-                <select 
-                  v-model="form.budget"
-                  id="budget"
-                  class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 code-font"
-                >
-                  <option value="">SELECT budget_range FROM options</option>
-                  <option value="under-5k">< $5,000 // Startup</option>
-                  <option value="5k-15k">$5,000 - $15,000 // Growth</option>
-                  <option value="15k-50k">$15,000 - $50,000 // Scale</option>
-                  <option value="50k-plus">$50,000+ // Enterprise</option>
-                </select>
+                <Select v-model="form.budget">
+                  <SelectTrigger class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white code-font">
+                    <SelectValue placeholder="SELECT budget_range FROM options" />
+                  </SelectTrigger>
+                  <SelectContent class="bg-slate-800 border-gray-600">
+                    <SelectItem value="under-5k" class="text-white hover:bg-slate-700 code-font">< $5,000 // Startup</SelectItem>
+                    <SelectItem value="5k-15k" class="text-white hover:bg-slate-700 code-font">$5,000 - $15,000 // Growth</SelectItem>
+                    <SelectItem value="15k-50k" class="text-white hover:bg-slate-700 code-font">$15,000 - $50,000 // Scale</SelectItem>
+                    <SelectItem value="50k-plus" class="text-white hover:bg-slate-700 code-font">$50,000+ // Enterprise</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div data-stagger>
@@ -132,17 +132,17 @@
                 <label for="message" class="block text-sm font-medium text-cyan-300 mb-2 code-font">
                   <span class="text-green-400">//</span> project_description
                 </label>
-                <textarea 
+                <Textarea 
                   v-model="form.message"
                   id="message" 
-                  rows="5"
+                  :rows="5"
                   required
                   placeholder="/* Tell us about your project vision...
    What problems are you solving?
    What's your timeline?
    Any specific tech requirements? */"
-                  class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-white transition-all duration-300 resize-none code-font"
-                ></textarea>
+                  class="bg-black/50 border-gray-600 focus:border-cyan-500 text-white resize-none code-font placeholder:text-gray-500"
+                />
               </div>
 
               <Button 
