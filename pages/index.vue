@@ -47,14 +47,18 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up animation-delay-600">
-            <Button size="lg" class="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-black px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:-translate-y-1 graffiti-font">
-              <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
-              INIT_PROJECT()
-            </Button>
-            <Button variant="outline" size="lg" class="border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 font-semibold px-8 py-4 text-lg rounded-xl backdrop-blur-sm graffiti-border cyber-glow code-font">
-              <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
-              ./view_portfolio.sh
-            </Button>
+            <NuxtLink to="/contact">
+              <Button size="lg" class="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-black px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:-translate-y-1 graffiti-font">
+                <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
+                INIT_PROJECT()
+              </Button>
+            </NuxtLink>
+            <NuxtLink to="/portfolio">
+              <Button variant="outline" size="lg" class="border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 font-semibold px-8 py-4 text-lg rounded-xl backdrop-blur-sm graffiti-border cyber-glow code-font">
+                <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
+                ./view_portfolio.sh
+              </Button>
+            </NuxtLink>
           </div>
 
           <!-- Impressive Stats -->
@@ -230,14 +234,18 @@
           <span class="text-black">if</span> (project.hasAwesomeIdea) { <span class="text-black">contact()</span>.<span class="text-black">then</span>(magic => deploy(magic)); }
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="outline" class="bg-black text-cyan-300 hover:bg-gray-900 border-black text-lg px-8 py-4 graffiti-font">
-            <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
-            ./schedule_call.sh
-          </Button>
-          <Button size="lg" class="bg-black/20 hover:bg-black/30 backdrop-blur text-lg px-8 py-4 code-font">
-            <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
-            start_conversation()
-          </Button>
+          <NuxtLink to="/contact">
+            <Button size="lg" variant="outline" class="bg-black text-cyan-300 hover:bg-gray-900 border-black text-lg px-8 py-4 graffiti-font">
+              <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
+              ./schedule_call.sh
+            </Button>
+          </NuxtLink>
+          <NuxtLink to="/contact">
+            <Button size="lg" class="bg-black/20 hover:bg-black/30 backdrop-blur text-lg px-8 py-4 code-font">
+              <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
+              start_conversation()
+            </Button>
+          </NuxtLink>
         </div>
       </div>
     </section>
