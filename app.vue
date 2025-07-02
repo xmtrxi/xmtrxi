@@ -1,6 +1,10 @@
 <template>
-  <div>
+  <div class="min-h-screen bg-slate-950">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <AppHeader />
+    <main class="pt-20">
+      <NuxtPage />
+    </main>
+    <AppFooter />
   </div>
 </template>
