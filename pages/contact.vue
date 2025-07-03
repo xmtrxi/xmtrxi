@@ -4,9 +4,9 @@
     <div class="fixed inset-0 matrix-bg opacity-10 pointer-events-none"></div>
     
     <!-- Hero Section -->
-    <section class="py-20 relative" data-animate="fade-up">
+    <section class="py-20 relative" >
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-animate="scale">
+        <div class="text-center mb-16" >
           <h1 class="text-6xl md:text-8xl font-black mb-6 graffiti-font">
             <span class="text-white">CONNECT_WITH</span>
             <span class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent cyber-glow">

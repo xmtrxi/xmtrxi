@@ -4,9 +4,9 @@
     <div class="fixed inset-0 matrix-bg opacity-10 pointer-events-none"></div>
     
     <!-- Hero Section -->
-    <section class="py-20 relative" data-animate="fade-up">
+    <section class="py-20 relative" >
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-animate="scale">
+        <div class="text-center mb-16" >
           <h1 class="text-6xl md:text-8xl font-black mb-6 graffiti-font">
             <span class="text-white">ABOUT_</span>
             <span class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent cyber-glow">
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Epic Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20" data-animate="fade-up">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20" >
           <div 
             v-for="(stat, index) in stats" 
             :key="stat.label" 
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Our Origin Story -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20" data-animate="fade-up">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20" >
           <div data-stagger>
             <h2 class="text-4xl md:text-5xl font-black mb-6 text-white graffiti-font">
               OUR_ORIGIN.story()
@@ -85,7 +85,7 @@
         </div>
 
         <!-- Core Values / Philosophy -->
-        <div class="mb-20" data-animate="fade-up">
+        <div class="mb-20" >
           <h2 class="text-4xl md:text-5xl font-black text-center mb-12 text-white graffiti-font">
             CORE_VALUES.init()
           </h2>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- The Squad -->
-        <div data-animate="fade-up">
+        <div >
           <h2 class="text-4xl md:text-5xl font-black text-center mb-4 text-white graffiti-font">
             THE_SQUAD.members[]
           </h2>
