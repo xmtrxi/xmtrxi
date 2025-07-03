@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/scripts",
+    "@nuxt/content",
     "shadcn-nuxt",
     "@nuxtjs/seo"
   ],
@@ -129,4 +130,20 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  // Content module configuration
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-dark',
+        dark: 'github-dark'
+      },
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini']
+    },
+    markdown: {
+      anchorLinks: false
+    },
+    documentDriven: false
+  },
+
 });

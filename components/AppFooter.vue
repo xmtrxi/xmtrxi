@@ -125,6 +125,14 @@
             <p class="text-gray-500 text-xs code-font mt-1">
               <span class="text-purple-400">Built with</span> Vue.js + Nuxt + ❤️ + ☕
             </p>
+            <div class="flex space-x-4 mt-2">
+              <NuxtLink to="/privacy" class="text-xs text-gray-500 hover:text-cyan-400 transition-colors code-font">
+                privacy_policy()
+              </NuxtLink>
+              <NuxtLink to="/terms" class="text-xs text-gray-500 hover:text-cyan-400 transition-colors code-font">
+                terms_of_service()
+              </NuxtLink>
+            </div>
           </div>
           
           <!-- Status Indicators -->
@@ -159,6 +167,8 @@ const quickLinks = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' }
 ]
 
