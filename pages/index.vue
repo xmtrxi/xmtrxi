@@ -3,9 +3,7 @@
     <!-- Revolutionary Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center">
       <!-- Animated Grid Background -->
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950"
-      >
+      <div class="absolute inset-0">
         <!-- Grid Pattern -->
         <div
           class="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"
@@ -27,10 +25,10 @@
 
         <!-- Gradient Orbs -->
         <div
-          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-full blur-3xl animate-pulse-slow"
+          class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse-slow"
         ></div>
         <div
-          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"
         ></div>
       </div>
 
@@ -39,7 +37,7 @@
         <div class="max-w-5xl mx-auto">
           <!-- Glowing Badge -->
           <div
-            class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-full mb-8 backdrop-blur-sm animate-fade-in-up"
+            class="inline-flex items-center px-6 py-3 rounded-full mb-8 backdrop-blur-sm animate-fade-in-up"
           >
             <div
               class="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"
@@ -56,6 +54,7 @@
             <span class="block text-white graffiti-font tracking-wider"
               >{'< OPEN_SOURCE />'}</span
             >
+
             <span
               class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent cyber-glow text-3xl sm:text-5xl lg:text-7xl"
             >
@@ -72,10 +71,11 @@
           <p
             class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400 code-font"
           >
-            <span class="text-green-400">//</span> We hack together IoT devices,
-            craft web experiences,<br />
+            <span class="text-green-400">//</span> We build IoT devices, craft
+            web experiences,<br />
             <span class="text-green-400">//</span> and build robots that
-            actually work. No BS, just code.
+            actually work. No BS, just code. <br />
+            <span class="text-green-400">//</span> We build cool stuff 😊
             <span class="block mt-2 text-cyan-400 text-lg"
               >console.log('Welcome to the future');</span
             >
@@ -88,7 +88,7 @@
             <NuxtLink to="/contact">
               <Button
                 size="lg"
-                class="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-black px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:-translate-y-1 graffiti-font"
+                class="bg-gradient-to-r cursor-pointer from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-black px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:-translate-y-1 graffiti-font"
               >
                 <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
                 INIT_PROJECT()
@@ -98,7 +98,7 @@
               <Button
                 variant="outline"
                 size="lg"
-                class="border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 font-semibold px-8 py-4 text-lg rounded-xl backdrop-blur-sm graffiti-border cyber-glow code-font"
+                class="cursor-pointer border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 font-semibold px-8 py-4 text-lg rounded-xl backdrop-blur-sm graffiti-border cyber-glow code-font"
               >
                 <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
                 ./view_portfolio.sh
@@ -473,10 +473,11 @@ const processSteps = [
 
 const techStack = [
   { name: "Vue.js", icon: "lucide:triangle", category: "Frontend" },
-  { name: "React", icon: "lucide:atom", category: "Frontend" },
   { name: "Nuxt", icon: "lucide:layers", category: "SSR/SSG" },
   { name: "Node.js", icon: "lucide:server", category: "Backend" },
   { name: "Python", icon: "lucide:code", category: "AI/ML" },
+  { name: "Php", icon: "lucide:philippine-peso", category: "Backend" },
+  { name: "Go", icon: "lucide:octagon", category: "Backend/Automation" },
   { name: "Rust", icon: "lucide:zap", category: "Systems" },
   { name: "PostgreSQL", icon: "lucide:database", category: "Database" },
   { name: "Redis", icon: "lucide:circle", category: "Cache" },

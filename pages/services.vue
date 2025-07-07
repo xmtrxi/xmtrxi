@@ -199,7 +199,7 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-20 bg-white dark:bg-gray-900">
+    <section class="py-20">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2
@@ -217,7 +217,7 @@
           <div
             v-for="(benefit, index) in benefits"
             :key="benefit.id"
-            class="text-center p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+            class="text-center p-8 rounded-2xl hover:shadow-lg transition-all duration-300 animate-fade-in-up border border-gray-900"
             :class="`animation-delay-${(index + 1) * 100}`"
           >
             <div
@@ -225,7 +225,7 @@
             >
               <Icon :name="benefit.icon" class="w-8 h-8 text-white" />
             </div>
-            <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+            <h3 class="text-xl font-bold mb-4">
               {{ benefit.title }}
             </h3>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
