@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
@@ -15,7 +14,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
   ],
 
-  // Enhanced SEO Configuration
   seo: {
     redirectToCanonicalSiteUrl: true,
   },
@@ -122,7 +120,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["~/assets/css/tailwind.css"],
+  css: ["./app/assets/css/tailwind.css"],
   vite: {
     plugins: [tailwindcss()],
   },
@@ -135,7 +133,7 @@ export default defineNuxtConfig({
      * Directory that the component lives in.
      * @default "./components/ui"
      */
-    componentDir: "./components/ui",
+    componentDir: "./app/components/ui",
   },
 
   // Performance optimizations
@@ -165,33 +163,5 @@ export default defineNuxtConfig({
         Teko: [300, 400, 500, 600, 700],
       },
     },
-  },
-
-  // Content module configuration
-  content: {
-    highlight: {
-      theme: {
-        default: "github-dark",
-        dark: "github-dark",
-      },
-      preload: [
-        "json",
-        "js",
-        "ts",
-        "html",
-        "css",
-        "vue",
-        "diff",
-        "shell",
-        "markdown",
-        "yaml",
-        "bash",
-        "ini",
-      ],
-    },
-    markdown: {
-      anchorLinks: false,
-    },
-    documentDriven: false,
   },
 });
