@@ -31,8 +31,8 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
-
-  // Image optimization
+  //
+  // // Image optimization
   image: {
     format: ["webp", "avif"],
     quality: 80,
