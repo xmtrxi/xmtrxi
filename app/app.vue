@@ -2,6 +2,7 @@
 <template>
   <div class="min-h-screen bg-slate-950">
     <NuxtRouteAnnouncer />
+    <NuxtLoadingIndicator />
     <AppHeader />
     <main class="pt-20">
       <NuxtPage />

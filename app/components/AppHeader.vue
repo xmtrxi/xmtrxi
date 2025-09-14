@@ -79,6 +79,7 @@
             :key="item.name"
             :to="item.href"
             class="group cursor-pointer relative text-gray-300 hover:text-cyan-300 transition-all duration-300 code-font font-semibold"
+            active-class="text-cyan-300"
             :style="{ animationDelay: `${index * 0.1}s` }"
           >
             <!-- Navigation Item -->
