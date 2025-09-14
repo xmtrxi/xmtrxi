@@ -1,7 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
   modules: [
@@ -9,11 +10,49 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/scripts",
-    "@nuxt/content",
     "shadcn-nuxt",
     "@nuxtjs/seo",
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: "",
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: "./app/components/ui",
+  },
+  // Performance optimizations
+  nitro: {
+    compressPublicAssets: true,
+  },
 
+  // Image optimization
+  image: {
+    format: ["webp", "avif"],
+    quality: 80,
+  },
+  fonts: {
+    google: {
+      families: {
+        // Nerdy coding fonts
+        "Fira Code": [300, 400, 500, 600, 700],
+        "Source Code Pro": [400, 500, 600, 700, 900],
+        "Space Mono": [400, 700],
+        "JetBrains Mono": [400, 500, 600, 700, 800],
+        // Graffiti/Street style fonts
+        Orbitron: [400, 500, 600, 700, 800, 900],
+        Rajdhani: [300, 400, 500, 600, 700],
+        "Exo 2": [300, 400, 500, 600, 700, 800, 900],
+        Teko: [300, 400, 500, 600, 700],
+      },
+    },
+  },
   seo: {
     redirectToCanonicalSiteUrl: true,
   },
@@ -117,51 +156,6 @@ export default defineNuxtConfig({
           }),
         },
       ],
-    },
-  },
-
-  css: ["./app/assets/css/tailwind.css"],
-  vite: {
-    plugins: [tailwindcss()],
-  },
-  shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: "",
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: "./app/components/ui",
-  },
-
-  // Performance optimizations
-  nitro: {
-    compressPublicAssets: true,
-  },
-
-  // Image optimization
-  image: {
-    format: ["webp", "avif"],
-    quality: 80,
-  },
-
-  // Font optimization
-  fonts: {
-    google: {
-      families: {
-        // Nerdy coding fonts
-        "Fira Code": [300, 400, 500, 600, 700],
-        "Source Code Pro": [400, 500, 600, 700, 900],
-        "Space Mono": [400, 700],
-        "JetBrains Mono": [400, 500, 600, 700, 800],
-        // Graffiti/Street style fonts
-        Orbitron: [400, 500, 600, 700, 800, 900],
-        Rajdhani: [300, 400, 500, 600, 700],
-        "Exo 2": [300, 400, 500, 600, 700, 800, 900],
-        Teko: [300, 400, 500, 600, 700],
-      },
     },
   },
 });
