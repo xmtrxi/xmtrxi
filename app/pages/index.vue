@@ -1,616 +1,337 @@
 <template>
-  <div class="overflow-hidden">
-    <!-- Revolutionary Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center">
-      <!-- Animated Grid Background -->
-      <div class="absolute inset-0">
-        <!-- Grid Pattern -->
-        <div
-          class="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"
-        ></div>
+  <div class="w-full">
+    <!-- Hero Section with Industrial Design -->
+    <section class="section-gradient py-20 md:py-32 relative">
+      <div class="divider-line-accent mb-8 md:mb-12"></div>
 
-        <!-- Floating Elements -->
-        <div
-          class="absolute top-20 left-20 w-4 h-4 bg-purple-500 rounded-full animate-float"
-        ></div>
-        <div
-          class="absolute top-40 right-32 w-2 h-2 bg-blue-400 rounded-full animate-float-delay-1"
-        ></div>
-        <div
-          class="absolute bottom-32 left-16 w-3 h-3 bg-pink-400 rounded-full animate-float-delay-2"
-        ></div>
-        <div
-          class="absolute bottom-20 right-20 w-6 h-6 bg-cyan-400 rounded-full animate-float-delay-3"
-        ></div>
-
-        <!-- Gradient Orbs -->
-        <div
-          class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse-slow"
-        ></div>
-        <div
-          class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"
-        ></div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="relative z-10 container mx-auto px-4 text-center">
-        <div class="max-w-5xl mx-auto">
-          <!-- Glowing Badge -->
-          <div
-            class="inline-flex items-center px-6 py-3 rounded-full mb-8 backdrop-blur-sm animate-fade-in-up"
-          >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
             <div
-              class="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"
-            ></div>
-            <span class="text-sm font-medium text-purple-300"
-              >Available for new projects</span
+              class="inline-block mb-4 px-3 py-1 bg-accent/10 dark:bg-accent/20 rounded border border-accent/30"
             >
-          </div>
-
-          <!-- Graffiti Tech Title -->
-          <h1
-            class="text-4xl sm:text-6xl lg:text-8xl font-black mb-8 leading-tight animate-fade-in-up animation-delay-200"
-          >
-            <span class="block text-white graffiti-font tracking-wider"
-              >{'< OPEN_SOURCE />'}</span
-            >
-
-            <span
-              class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent cyber-glow text-3xl sm:text-5xl lg:text-7xl"
-            >
-              IoT • WEB • ROBOTS
-            </span>
-            <span
-              class="block text-white text-2xl sm:text-4xl lg:text-5xl font-normal mt-4 code-font"
-            >
-              System.Design.Execute();
-            </span>
-          </h1>
-
-          <!-- Tech Subtext -->
-          <p
-            class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400 code-font"
-          >
-            <span class="text-green-400">//</span> We build IoT devices, craft
-            web experiences,<br />
-            <span class="text-green-400">//</span> and build robots that
-            actually work. No BS, just code. <br />
-            <span class="text-green-400">//</span> We build cool stuff 😊
-            <span class="block mt-2 text-cyan-400 text-lg"
-              >console.log('Welcome to the future');</span
-            >
-          </p>
-
-          <!-- Action Buttons -->
-          <div
-            class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up animation-delay-600"
-          >
-            <NuxtLink to="/contact">
+              <p class="text-sm font-mono text-accent">// Welcome to xmtrxi</p>
+            </div>
+            <h1 class="heading-xl mb-6 dark:text-foreground">
+              Transform Your Vision Into
+              <span class="text-accent">Reality</span>
+            </h1>
+            <p class="text-lg text-muted-foreground mb-8 leading-relaxed">
+              xmtrxi delivers cutting-edge technology solutions and innovative
+              services that empower businesses to succeed in the digital age.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
               <Button
+                as-child
                 size="lg"
-                class="bg-gradient-to-r cursor-pointer from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-black px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:-translate-y-1 graffiti-font"
+                class="dark:bg-accent dark:text-accent-foreground"
               >
-                <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
-                INIT_PROJECT()
+                <NuxtLink to="/contact">Get Started</NuxtLink>
               </Button>
-            </NuxtLink>
-            <NuxtLink to="/portfolio">
               <Button
                 variant="outline"
+                as-child
                 size="lg"
-                class="cursor-pointer border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 font-semibold px-8 py-4 text-lg rounded-xl backdrop-blur-sm graffiti-border cyber-glow code-font"
+                class="dark:border-accent/50 dark:hover:bg-accent/10"
               >
-                <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
-                ./view_portfolio.sh
+                <NuxtLink to="/about">Learn More</NuxtLink>
               </Button>
-            </NuxtLink>
-          </div>
-
-          <!-- Impressive Stats -->
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 animate-fade-in-up animation-delay-800"
-          >
-            <div v-for="(stat, index) in stats" :key="stat.label" class="group">
-              <div
-                class="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300"
-              >
-                {{ stat.value }}
-              </div>
-              <div
-                class="text-gray-400 uppercase text-sm font-semibold tracking-wider"
-              >
-                {{ stat.label }}
-              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div
-        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <div
-          class="w-6 h-10 border-2 border-purple-400 rounded-full flex justify-center"
-        >
-          <div
-            class="w-1 h-3 bg-purple-400 rounded-full mt-2 animate-pulse"
-          ></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Process Section -->
-    <section
-      class="py-32 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden matrix-bg"
-    >
-      <!-- Background Effects -->
-      <div class="absolute inset-0">
-        <div
-          class="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-green-500/50 to-transparent"
-        ></div>
-        <div
-          class="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-cyan-500/50 to-transparent"
-        ></div>
-      </div>
-
-      <div class="container mx-auto px-4 relative">
-        <div class="text-center mb-20">
-          <h2
-            class="text-5xl md:text-7xl font-black mb-6 text-white graffiti-font"
-          >
-            OUR_STACK
-            <span
-              class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent"
-            >
-              .METHODOLOGY
-            </span>
-          </h2>
-          <p
-            class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed code-font"
-          >
-            <span class="text-green-400">if</span> (idea.isAmazing()) {
-            <span class="text-cyan-400">build()</span>;
-            <span class="text-purple-400">deploy()</span>;
-            <span class="text-pink-400">scale()</span>; }
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            v-for="(step, index) in processSteps"
-            :key="step.title"
-            class="group relative p-8 rounded-3xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 hover:border-purple-400/40 backdrop-blur-sm transition-all duration-500 transform hover:-translate-y-4 hover:scale-105"
-            :class="`animate-fade-in-up animation-delay-${(index + 1) * 200}`"
-          >
-            <!-- Step Number -->
-            <div class="absolute -top-6 left-8">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center font-black text-white text-lg shadow-lg shadow-purple-500/50"
-              >
-                {{ index + 1 }}
-              </div>
-            </div>
-
-            <!-- Icon -->
+          <div class="relative h-96 md:h-full">
+            <div class="accent-line-top"></div>
+            <div class="accent-line-bottom"></div>
             <div
-              class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl flex items-center justify-center mb-8 mt-4 group-hover:scale-110 transition-transform duration-300"
-            >
-              <Icon :name="step.icon" class="w-10 h-10 text-purple-400" />
-            </div>
-
-            <h3
-              class="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors"
-            >
-              {{ step.title }}
-            </h3>
-            <p class="text-gray-300 leading-relaxed mb-6">
-              {{ step.description }}
-            </p>
-
-            <!-- Progress Bar -->
-            <div class="w-full h-1 bg-slate-700 rounded-full overflow-hidden">
-              <div
-                class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Tech Stack Section -->
-    <section
-      class="py-32 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden"
-    >
-      <!-- Floating tech particles -->
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          class="absolute top-20 left-20 w-2 h-2 bg-green-400 rounded-full animate-pulse opacity-60"
-        ></div>
-        <div
-          class="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-400 opacity-60"
-        ></div>
-        <div
-          class="absolute bottom-32 left-16 w-3 h-3 bg-purple-400 rounded-full animate-pulse animation-delay-800 opacity-60"
-        ></div>
-        <div
-          class="absolute bottom-20 right-20 w-2 h-2 bg-pink-400 rounded-full animate-pulse animation-delay-600 opacity-60"
-        ></div>
-      </div>
-
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-20">
-          <h2
-            class="text-5xl md:text-7xl font-black mb-6 text-white leading-tight"
-          >
-            <span class="graffiti-font tracking-wider">POWERED_BY</span>
-            <span
-              class="block bg-gradient-to-r from-green-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent cyber-glow text-4xl md:text-6xl mt-2"
-            >
-              .cutting_edge_tech
-            </span>
-          </h2>
-          <p
-            class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium"
-          >
-            <span class="text-green-400 code-font">//</span> We leverage
-            bleeding-edge technologies to build scalable,
-            <br class="hidden md:block" />performant, and future-proof digital
-            solutions.
-          </p>
-        </div>
-
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6"
-        >
-          <div
-            v-for="(tech, index) in techStack"
-            :key="tech.name"
-            class="group relative p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 backdrop-blur-sm"
-            :class="`animate-fade-in-up animation-delay-${(index + 1) * 100}`"
-            data-stagger
-          >
-            <!-- Glow effect -->
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
+              class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-2xl dark:from-accent/10"
             ></div>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/modern-technology-abstract-Ebz3aghgu3D3jTH5vmXZFyBAjAJArx.png"
+              alt="Hero illustration"
+              class="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
 
-            <div class="text-center relative z-10">
-              <div
-                class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 group-hover:rotate-6 border border-gray-600/50 group-hover:border-cyan-500/50"
-              >
-                <Icon
-                  :name="tech.icon"
-                  class="w-8 h-8 text-gray-400 group-hover:text-cyan-400 transition-colors duration-300"
+      <div class="divider-line-accent mt-8 md:mt-12"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section
+      class="py-20 md:py-32 relative border-y border-border dark:border-border"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div
+            v-for="stat in stats"
+            :key="stat.label"
+            class="p-6 dark:bg-secondary/5 rounded-lg"
+          >
+            <div class="text-4xl md:text-5xl font-bold text-accent mb-2">
+              {{ stat.value }}
+            </div>
+            <p class="text-muted-foreground font-mono text-sm">
+              {{ stat.label }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 md:py-32 relative">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="heading-lg mb-4 dark:text-foreground">
+            Why Choose xmtrxi
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We combine expertise, innovation, and dedication to deliver
+            exceptional results.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Card
+            v-for="feature in features"
+            :key="feature.id"
+            class="industrial-card hover:shadow-lg transition-all hover:border-accent/50 group dark:bg-card/50"
+          >
+            <CardContent class="pt-6">
+              <div class="relative mb-4">
+                <component
+                  :is="feature.icon"
+                  class="w-12 h-12 text-accent group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <h3
-                class="text-sm font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300 tracking-wide"
-              >
-                {{ tech.name }}
+              <h3 class="heading-md mb-2 dark:text-foreground">
+                {{ feature.title }}
               </h3>
-              <p
-                class="text-xs text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 code-font font-medium"
-              >
-                {{ tech.category }}
+              <p class="text-muted-foreground">
+                {{ feature.description }}
               </p>
-            </div>
-
-            <!-- Hover line effect -->
-            <div
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-500"
-            ></div>
-          </div>
-        </div>
-
-        <!-- Tech description cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <div
-            class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-green-500/30"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4"
-              >
-                <Icon name="lucide:code" class="w-6 h-6 text-white" />
-              </div>
-              <h3 class="text-xl font-bold text-white">Frontend Mastery</h3>
-            </div>
-            <p class="text-gray-300 leading-relaxed">
-              Modern frameworks like Vue.js, React, and Nuxt for lightning-fast,
-              interactive user experiences.
-            </p>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-cyan-500/30"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mr-4"
-              >
-                <Icon name="lucide:server" class="w-6 h-6 text-white" />
-              </div>
-              <h3 class="text-xl font-bold text-white">Backend Power</h3>
-            </div>
-            <p class="text-gray-300 leading-relaxed">
-              Robust server-side solutions with Node.js, Python, and Rust for
-              maximum performance and reliability.
-            </p>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-purple-500/30"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4"
-              >
-                <Icon name="lucide:cloud" class="w-6 h-6 text-white" />
-              </div>
-              <h3 class="text-xl font-bold text-white">Cloud Native</h3>
-            </div>
-            <p class="text-gray-300 leading-relaxed">
-              Scalable cloud infrastructure with Docker, Kubernetes, and AWS for
-              enterprise-grade deployment.
-            </p>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
 
-    <!-- Featured Portfolio Projects -->
-    <PortfolioPreview />
-
-    <!-- CTA Section -->
-    <section
-      class="py-20 bg-gradient-to-r from-green-600 to-cyan-600 text-white relative overflow-hidden"
-    >
-      <div class="absolute inset-0 bg-black/20"></div>
-      <div
-        class="absolute top-0 left-0 w-full h-full matrix-bg opacity-10"
-      ></div>
-
-      <div class="relative z-10 container mx-auto px-4 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 graffiti-font">
-          READY_TO_BUILD.next()?
-        </h2>
-        <p
-          class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto code-font"
-        >
-          <span class="text-black">if</span> (project.hasAwesomeIdea) {
-          <span class="text-black">contact()</span>.<span class="text-black"
-            >then</span
-          >(magic => deploy(magic)); }
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink to="/contact">
-            <Button
-              size="lg"
-              variant="outline"
-              class="bg-black text-cyan-300 hover:bg-gray-900 border-black text-lg px-8 py-4 graffiti-font"
-            >
-              <Icon name="lucide:terminal" class="w-5 h-5 mr-2" />
-              ./schedule_call.sh
-            </Button>
-          </NuxtLink>
-          <NuxtLink to="/contact">
-            <Button
-              size="lg"
-              class="bg-black/20 hover:bg-black/30 backdrop-blur text-lg px-8 py-4 code-font"
-            >
-              <Icon name="lucide:zap" class="w-5 h-5 mr-2" />
-              start_conversation()
-            </Button>
-          </NuxtLink>
+    <!-- Services Preview Section -->
+    <section class="section-gradient py-20 md:py-32 relative">
+      <div class="divider-line-accent mb-8"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="heading-lg mb-4 dark:text-foreground">Our Services</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From strategy to implementation, we provide comprehensive solutions
+            tailored to your needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            v-for="service in services"
+            :key="service.id"
+            class="p-6 border border-border rounded-lg hover:border-accent/50 transition-colors dark:border-border dark:hover:border-accent/50 dark:bg-card/30"
+          >
+            <h3 class="font-mono text-accent text-sm mb-2">
+              {{ service.icon }}
+            </h3>
+            <h4 class="text-lg font-semibold mb-2 dark:text-foreground">
+              {{ service.name }}
+            </h4>
+            <p class="text-sm text-muted-foreground">
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <Button
+            as-child
+            size="lg"
+            class="dark:bg-accent dark:text-accent-foreground"
+          >
+            <NuxtLink to="/services">View All Services</NuxtLink>
+          </Button>
         </div>
       </div>
+      <div class="divider-line-accent mt-8"></div>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="py-20 md:py-32 relative">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="heading-lg mb-4 dark:text-foreground">Recent Projects</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore the innovative solutions we've built for our clients.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <Card
+            v-for="project in recentProjects"
+            :key="project.id"
+            class="group overflow-hidden dark:bg-card/50"
+          >
+            <div
+              class="relative h-48 overflow-hidden bg-secondary dark:bg-secondary/50"
+            >
+              <img
+                :src="project.image"
+                :alt="project.title"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+            <CardContent class="pt-6">
+              <h3
+                class="heading-md mb-2 group-hover:text-accent transition-colors dark:text-foreground"
+              >
+                {{ project.title }}
+              </h3>
+              <p class="text-muted-foreground text-sm mb-4">
+                {{ project.description }}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <Badge
+                  v-for="tech in project.technologies"
+                  :key="tech"
+                  variant="secondary"
+                  class="font-mono text-xs dark:bg-accent/10 dark:text-accent"
+                  >{{ tech }}</Badge
+                >
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        <div class="text-center">
+          <Button
+            as-child
+            variant="outline"
+            size="lg"
+            class="dark:border-accent/50 dark:hover:bg-accent/10"
+          >
+            <NuxtLink to="/projects">View All Projects</NuxtLink>
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-gradient py-20 md:py-32 relative">
+      <div class="divider-line-accent mb-8"></div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="heading-lg mb-6 dark:text-foreground">
+          Ready to Start Your Journey?
+        </h2>
+        <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Let's work together to create something extraordinary. Reach out
+          today.
+        </p>
+        <Button
+          as-child
+          size="lg"
+          class="dark:bg-accent dark:text-accent-foreground"
+        >
+          <NuxtLink to="/contact">Contact Us Now</NuxtLink>
+        </Button>
+      </div>
+
+      <div class="divider-line-accent mt-8"></div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: "XMTRXI - Transform Your Ideas Into Digital Excellence",
-  meta: [
-    {
-      name: "description",
-      content:
-        "We craft innovative digital solutions that captivate audiences, drive engagement, and accelerate business growth through cutting-edge technology and creative design.",
-    },
-  ],
-});
+import { ref } from "vue";
+import { Zap, Shield, Users, Rocket, Code, TrendingUp } from "lucide-vue-next";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
-const stats = [
-  { value: "100+", label: "REPOS DEPLOYED" },
-  { value: "500K+", label: "LINES OF CODE" },
-  { value: "99.9%", label: "UPTIME ACHIEVED" },
-  { value: "24/7", label: "DEVOPS MONITORING" },
-];
+const stats = ref([
+  { value: "50+", label: "Projects Completed" },
+  { value: "30+", label: "Happy Clients" },
+  { value: "15+", label: "Years Experience" },
+  { value: "100%", label: "Satisfaction Rate" },
+]);
 
-const features = [
+const features = ref([
   {
-    icon: "lucide:lightbulb",
-    title: "Innovation First",
+    id: 1,
+    icon: Zap,
+    title: "High Performance",
     description:
-      "We leverage cutting-edge technologies and creative approaches to deliver solutions that set you apart from the competition.",
+      "Optimized solutions that deliver speed, reliability, and scalability for your business needs.",
   },
   {
-    icon: "lucide:users",
+    id: 2,
+    icon: Shield,
+    title: "Security First",
+    description:
+      "Enterprise-grade security protocols to protect your data and ensure peace of mind.",
+  },
+  {
+    id: 3,
+    icon: Users,
     title: "Expert Team",
     description:
-      "Our skilled professionals bring years of experience and passion to every project, ensuring exceptional results.",
+      "Dedicated professionals committed to your success and continuous innovation.",
   },
-  {
-    icon: "lucide:zap",
-    title: "Fast Delivery",
-    description:
-      "We understand the importance of time-to-market and deliver high-quality solutions within agreed timelines.",
-  },
-];
+]);
 
-const processSteps = [
+const services = ref([
   {
-    icon: "lucide:search",
-    title: "ANALYZE() && ARCHITECT",
-    description:
-      "We reverse-engineer your requirements, analyze system dependencies, and architect solutions that scale from zero to production.",
+    id: 1,
+    icon: "→",
+    name: "Web Development",
+    description: "Custom web applications built with modern technologies.",
   },
   {
-    icon: "lucide:cpu",
-    title: "PROTOTYPE.BUILD()",
-    description:
-      "Rapid prototyping with CI/CD pipelines, containerized environments, and real-time collaboration tools for maximum velocity.",
+    id: 2,
+    icon: "→",
+    name: "Mobile Solutions",
+    description: "Native and cross-platform mobile applications.",
   },
   {
-    icon: "lucide:rocket",
-    title: "DEPLOY && MONITOR",
-    description:
-      "Automated deployments, infrastructure as code, monitoring dashboards, and 24/7 observability for bulletproof systems.",
+    id: 3,
+    icon: "→",
+    name: "Cloud Infrastructure",
+    description: "Scalable cloud solutions and DevOps services.",
   },
-];
+  {
+    id: 4,
+    icon: "→",
+    name: "AI & Machine Learning",
+    description: "Intelligent systems and data-driven solutions.",
+  },
+  {
+    id: 5,
+    icon: "→",
+    name: "Consulting",
+    description: "Strategic technology consulting and planning.",
+  },
+  {
+    id: 6,
+    icon: "→",
+    name: "Support & Maintenance",
+    description: "24/7 technical support and system maintenance.",
+  },
+]);
 
-const techStack = [
-  { name: "Vue.js", icon: "lucide:triangle", category: "Frontend" },
-  { name: "Nuxt", icon: "lucide:layers", category: "SSR/SSG" },
-  { name: "Node.js", icon: "lucide:server", category: "Backend" },
-  { name: "Python", icon: "lucide:code", category: "AI/ML" },
-  { name: "Php", icon: "lucide:philippine-peso", category: "Backend" },
-  { name: "Go", icon: "lucide:octagon", category: "Backend/Automation" },
-  { name: "Rust", icon: "lucide:zap", category: "Systems" },
-  { name: "PostgreSQL", icon: "lucide:database", category: "Database" },
-  { name: "Redis", icon: "lucide:circle", category: "Cache" },
-  { name: "AWS", icon: "lucide:cloud", category: "Cloud" },
-  { name: "Docker", icon: "lucide:box", category: "DevOps" },
-  { name: "Kubernetes", icon: "lucide:globe", category: "Orchestration" },
-  { name: "Arduino", icon: "lucide:cpu", category: "IoT" },
-];
-
-const services = [
+const recentProjects = ref([
   {
-    icon: "lucide:code",
-    title: "Web Development",
+    id: 1,
+    title: "E-Commerce Platform",
     description:
-      "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
+      "Full-featured marketplace with real-time inventory management.",
+    image: "/placeholder.svg?height=300&width=500",
+    technologies: ["Vue", "Node.js", "PostgreSQL"],
   },
   {
-    icon: "lucide:smartphone",
-    title: "Mobile Apps",
-    description:
-      "Native and cross-platform mobile applications that engage users and drive business growth.",
+    id: 2,
+    title: "Healthcare Management",
+    description: "HIPAA-compliant patient management system.",
+    image: "/placeholder.svg?height=300&width=500",
+    technologies: ["React", "Python", "AWS"],
   },
-  {
-    icon: "lucide:palette",
-    title: "UI/UX Design",
-    description:
-      "Beautiful, intuitive designs that create meaningful connections between your brand and your audience.",
-  },
-  {
-    icon: "lucide:trending-up",
-    title: "Digital Marketing",
-    description:
-      "Strategic marketing campaigns that increase visibility, engagement, and conversions across digital channels.",
-  },
-  {
-    icon: "lucide:shield-check",
-    title: "Security Solutions",
-    description:
-      "Comprehensive security measures to protect your digital assets and ensure data privacy compliance.",
-  },
-  {
-    icon: "lucide:settings",
-    title: "Maintenance & Support",
-    description:
-      "Ongoing support and maintenance services to keep your digital solutions running smoothly and up-to-date.",
-  },
-];
+]);
 </script>
-
-<style scoped>
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
-
-.animation-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animation-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animation-delay-600 {
-  animation-delay: 0.6s;
-}
-
-.animation-delay-800 {
-  animation-delay: 0.8s;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.animation-delay-6000 {
-  animation-delay: 6s;
-}
-
-.animation-delay-100 {
-  animation-delay: 0.1s;
-}
-
-/* Add initial hidden state for animated elements */
-.animate-fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-}
-</style>
